@@ -114,7 +114,7 @@ void Renderer::init() {
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // Uncomment for wireframe
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // Uncomment for wireframe
 
     tex_path_ = current / "textures" / "mc_basic_texture_atlas.png";
     texture_ = load_texture(tex_path_.c_str());
@@ -140,6 +140,8 @@ void Renderer::render(const World& world, const Camera& camera) {
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture_);
         shader_->set_int("currentTexture", 0);
+
+
 
         //call start_new_frame
         start_new_frame(camera, window_);
@@ -246,3 +248,4 @@ void Renderer::mouse_callback(GLFWwindow* window, double xpos, double ypos) {
 }
 
 Renderer* Renderer::instance_ = nullptr;
+

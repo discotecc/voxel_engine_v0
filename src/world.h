@@ -72,6 +72,12 @@ public:
         chunk.fill_air();
     }
 
+    void create_grass_chunk(int cx, int cy, int cz) {
+        glm::ivec3 pos(cx, cy, cz);
+        Chunk& chunk = get_or_create_chunk(pos);
+        chunk.fill_grass();
+    }
+
     void print_all_loaded_chunks() const {
         std::cout << "=== Loaded chunks: " << chunks_.size() << " ===\n\n";
 
@@ -84,7 +90,7 @@ public:
         std::cout << "\n";
     }
 
-    size_t measure_world_memory() const {
+    inline size_t measure_memory() const {
         size_t total = sizeof(chunks_);
 
         for (const auto& [position, chunk] : chunks_) {
@@ -95,16 +101,28 @@ public:
 
 
 private:
+
     inline constexpr size_t index(int x, int y, int z) const noexcept {
         return static_cast<size_t>(x) + static_cast<size_t>(z) * WORLD_SIZE + static_cast<size_t>(y) * WORLD_SIZE * WORLD_SIZE;
     }
+
     inline constexpr glm::ivec3 world_to_chunk_pos(int wx, int wy, int wz) const {
-        return(glm::ivec3(wx / CHUNK_SIZE, wy / CHUNK_SIZE, wz / CHUNK_SIZE));
+        return glm::ivec3(
+            (int)std::floor((float)wx / CHUNK_SIZE),
+            (int)std::floor((float)wy / CHUNK_SIZE),
+            (int)std::floor((float)wz / CHUNK_SIZE)
+        );
     }
+
     inline constexpr glm::ivec3 world_to_local_pos(int wx, int wy, int wz) const {
-        return glm::ivec3(wx % CHUNK_SIZE, wy % CHUNK_SIZE, wz % CHUNK_SIZE);
+        auto mod = [](int a, int b) { return ((a % b) + b) % b; };
+        return glm::ivec3(
+            mod(wx, CHUNK_SIZE),
+            mod(wy, CHUNK_SIZE),
+            mod(wz, CHUNK_SIZE));
     }
-    int count_solid_blocks(const Chunk& chunk) const {
+
+    inline int count_solid_blocks(const Chunk& chunk) const {
         int count = 0;
         for (uint16_t b : chunk.blocks_) {
             if (b != 0) ++count;

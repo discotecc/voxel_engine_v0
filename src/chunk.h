@@ -67,6 +67,10 @@ public:
         blocks_.assign(CHUNK_VOLUME, 0);
     }
 
+    inline void fill_grass() {
+        blocks_.assign(CHUNK_VOLUME, 1);
+    }
+    
     size_t measure_memory() const {
         size_t total = sizeof(Chunk);
         total += blocks_.capacity() * sizeof(uint16_t);

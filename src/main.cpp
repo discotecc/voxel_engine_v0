@@ -32,17 +32,18 @@ int main() {
     world.create_dirt_chunk(2,2,2);
     world.create_air_chunk(1,1,1);
     world.create_air_chunk(0,0,0);
+    world.create_grass_chunk(-1,0,0);
     world.set_block(-203,30,30,Block_Type::DIRT);
     world.print_all_loaded_chunks();
 
-    world.create_dirt_chunk(1,0,0);
+    world.set_block(1,0,0,Block_Type::DIRT);
 
     std::filesystem::path current = std::filesystem::current_path();
     std::filesystem::path fs_shader_path = current / "src" / "shaders" / "mainfragmentshader.fs";
     std::cout << "Path to fragment shader... " << fs_shader_path << std::endl;
 
 
-    std::cout << "World memory usage... " << world.measure_world_memory() << " bytes" << std::endl;
+    std::cout << "World memory usage... " << world.measure_memory() << " bytes" << std::endl;
     //Game game = Game();
     //uint8_t ran = game.run();
 
