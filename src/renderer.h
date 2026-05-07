@@ -28,16 +28,14 @@ public:
     Renderer(World& world);
     ~Renderer();
 
-    void init();
+    void init(int wf);
     void render(const World& world, const Camera& camera);
     void upload_chunk_mesh(Chunk& chunk);
     void cleanup();
     void loop();
     void process_input(GLFWwindow* window, Camera* Camera);
 
-
     static void mouse_callback(GLFWwindow* window, double xpos, double ypos);
-
 
 
 private:
@@ -61,7 +59,7 @@ private:
     void draw_chunk(const Chunk& chunk); // Bind VAO and issue draw call
     bool is_chunk_visible(const Chunk& chunk, const Camera& camera) const; //simple fustrum culling
 
-    //updated erry frame
+    //updated every frame...
     glm::mat4 view_matrix_;
     glm::mat4 projection_matrix_;
 };
@@ -103,7 +101,7 @@ Renderer::~Renderer() {
     delete camera_;
 }
 
-void Renderer::init() {
+void Renderer::init(int wf) {
     std::filesystem::path current = std::filesystem::current_path();
     fs_path_ = current / "src" / "shaders" / "mainfragmentshader.fs";
     vs_path_ = current / "src" / "shaders" / "mainvertexshader.vs";
@@ -114,12 +112,16 @@ void Renderer::init() {
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // Uncomment for wireframe
+
+    if (wf) {
+    	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    }
 
     tex_path_ = current / "textures" / "mc_basic_texture_atlas.png";
     texture_ = load_texture(tex_path_.c_str());
 
     mesher_.init();
+    //mesher_.generate_full_mesh();
 }
 
 void Renderer::start_new_frame(const Camera& camera, GLFWwindow* window) {
@@ -141,16 +143,14 @@ void Renderer::render(const World& world, const Camera& camera) {
         glBindTexture(GL_TEXTURE_2D, texture_);
         shader_->set_int("currentTexture", 0);
 
-
-
         //call start_new_frame
         start_new_frame(camera, window_);
-        mesher_.generate_mesh();
+        mesher_.generate_mesh(); //todo - good dynamic meshing...
         glBindVertexArray(mesher_.get_VAO());
         glDrawArrays(GL_TRIANGLES, 0, mesher_.get_vertex_count());
         glBindVertexArray(0);
         //collect visible chunks
-        //call fulstrum culling
+        //call fulstrum culling probably
         //loop over visible_chunks and call draw_chunk
     }
 
@@ -213,8 +213,7 @@ void Renderer::process_input(GLFWwindow* window, Camera* camera)
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        camera->process_keyboard(FORWARD);
-        //update translation matrix uniform to move cube and camera forward/backward/left/right       
+        camera->process_keyboard(FORWARD);       
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
         camera->process_keyboard(BACKWARD);
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)

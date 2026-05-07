@@ -52,9 +52,9 @@ inline std::vector<float> build_chunk_mesh(const Chunk& chunk) {
 
     // World-space origin of this chunk
     const glm::vec3 origin(
-        chunk.pos_.x * CHUNK_SIZE,
-        chunk.pos_.y * CHUNK_SIZE,
-        chunk.pos_.z * CHUNK_SIZE
+        chunk.chunk_pos_.x * CHUNK_SIZE,
+        chunk.chunk_pos_.y * CHUNK_SIZE,
+        chunk.chunk_pos_.z * CHUNK_SIZE
     );
 
     for (int y = 0; y < CHUNK_SIZE; ++y)

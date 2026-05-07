@@ -4,7 +4,7 @@ project(VEngine0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Homebrew prefix hints (Apple Silicon + Intel)
+# homebrew prefix hints for compatibility with apple machines...
 if (EXISTS "/opt/homebrew")
   list(APPEND CMAKE_PREFIX_PATH "/opt/homebrew")
 endif()
@@ -18,11 +18,13 @@ find_package(OpenGL REQUIRED)
 
 add_executable(vengine0
   src/main.cpp
-  external/glad/src/glad.c      # <-- force-compile glad.c into the exe
+  external/glad/src/glad.c      # have to force glad.c to compile into the exe
 )
 
 target_include_directories(vengine0 PRIVATE
   external/glad/include
+  external/spdlog/include
+  external/stbi/include
 )
 
 target_link_libraries(vengine0 PRIVATE

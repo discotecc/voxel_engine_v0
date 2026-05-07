@@ -103,7 +103,9 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
@@ -572,6 +574,12 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/view_interface.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__std_mbstate_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/atomic_unique_lock.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/intrusive_list_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/intrusive_shared_ptr.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_callback.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_state.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_token.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__string/char_traits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__string/constexpr_c_functions.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__string/extern_template_lists.h \
@@ -585,6 +593,9 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/support.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/support/pthread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/this_thread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/thread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/find_index.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/ignore.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/make_tuple_types.h \
@@ -752,11 +763,13 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cctype \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cerrno \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cfloat \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/clocale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/compare \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/concepts \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdint \
@@ -774,6 +787,7 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/format \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/functional \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/initializer_list \
@@ -785,6 +799,7 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iterator \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/limits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/locale \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/mutex \
@@ -808,6 +823,7 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string_view \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/thread \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/tuple \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/typeinfo \
@@ -820,7 +836,9 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/errno.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/fcntl.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/float.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/arm/_OSByteOrder.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h \
@@ -864,6 +882,7 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_select.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blkcnt_t.h \
@@ -880,6 +899,7 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_set.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_setsize.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_zero.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_filesec_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsblkcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_gid_t.h \
@@ -899,10 +919,14 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_nlink_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_o_dsync.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_o_sync.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_off_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_pid_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_posix_vdisable.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rsize_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_s_ifmt.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_seek_set.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigaltstack.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h \
@@ -923,18 +947,23 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uintptr_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_useconds_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uuid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_va_list.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wint_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/errno.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/fcntl.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/qos.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/select.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stat.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/unistd.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
@@ -972,13 +1001,58 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/glad/include/KHR/khrplatform.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/glad/include/glad/glad.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/common-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/common.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/backtracer-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/backtracer.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/circular_q.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/console_globals.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/file_helper-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/file_helper.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/fmt_helper.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/log_msg-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/log_msg.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/log_msg_buffer-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/log_msg_buffer.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/null_mutex.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/os-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/os.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/periodic_worker-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/periodic_worker.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/registry-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/registry.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/synchronous_factory.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/fmt/bundled/base.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/fmt/bundled/format-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/fmt/bundled/format.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/fmt/fmt.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/formatter.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/logger-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/logger.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/mdc.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/pattern_formatter-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/pattern_formatter.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/ansicolor_sink-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/ansicolor_sink.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/base_sink-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/base_sink.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/rotating_file_sink-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/rotating_file_sink.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/sink-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/sink.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/stdout_color_sinks-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/stdout_color_sinks.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/spdlog-inl.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/spdlog.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/tweakme.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/version.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/stbi/include/stb_image.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/block_type.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/camera.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/chunk.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/mesher.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/renderer.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/shader.h \
-  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/stb_image.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/world.h \
   /opt/homebrew/include/GLFW/glfw3.h \
   /opt/homebrew/include/glm/common.hpp \
@@ -1206,8 +1280,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /opt/homebrew/include/glm/ext/matrix_projection.hpp:
 
-/opt/homebrew/include/glm/trigonometric.hpp:
-
 /opt/homebrew/include/glm/gtc/constants.inl:
 
 /opt/homebrew/include/glm/gtc/constants.hpp:
@@ -1219,8 +1291,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /opt/homebrew/include/glm/detail/type_half.hpp:
 
 /opt/homebrew/include/glm/detail/func_trigonometric.inl:
-
-/opt/homebrew/include/glm/simd/platform.h:
 
 /opt/homebrew/include/glm/ext/vector_uint2_sized.hpp:
 
@@ -1336,8 +1406,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /opt/homebrew/include/glm/detail/type_mat2x4.inl:
 
-/opt/homebrew/include/glm/detail/type_mat2x4.hpp:
-
 /opt/homebrew/include/glm/detail/type_mat2x3.inl:
 
 /opt/homebrew/include/glm/detail/type_mat2x3.hpp:
@@ -1345,8 +1413,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /opt/homebrew/include/glm/detail/type_vec4.inl:
 
 /opt/homebrew/include/glm/detail/type_mat2x2.hpp:
-
-/opt/homebrew/include/glm/detail/type_vec1.inl:
 
 /opt/homebrew/include/glm/detail/func_geometric.inl:
 
@@ -1379,6 +1445,68 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/chunk.h:
 
 /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/block_type.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/stbi/include/stb_image.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/version.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/tweakme.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/spdlog-inl.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/stdout_color_sinks-inl.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/sink.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/rotating_file_sink.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/base_sink.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/pattern_formatter.h:
+
+/opt/homebrew/include/glm/detail/type_vec1.inl:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/mdc.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/logger.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/logger-inl.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/formatter.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/fmt/bundled/format.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/fmt/bundled/format-inl.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/fmt/bundled/base.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/synchronous_factory.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/registry-inl.h:
+
+/opt/homebrew/include/glm/trigonometric.hpp:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/os.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/null_mutex.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/log_msg_buffer.h:
+
+/opt/homebrew/include/glm/detail/type_mat2x4.hpp:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/log_msg-inl.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/file_helper-inl.h:
+
+/opt/homebrew/include/glm/simd/platform.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/console_globals.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/backtracer.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/backtracer-inl.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/common.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h:
 
@@ -1422,11 +1550,17 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/unistd.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/select.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/qos.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/fcntl.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/errno.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uuid_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_useconds_t.h:
 
@@ -1442,6 +1576,12 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_time_t.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_s_ifmt.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_o_sync.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_o_dsync.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_nlink_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_key_t.h:
@@ -1455,6 +1595,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_in_port_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_gid_t.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/spdlog.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsblkcnt_t.h:
 
@@ -1476,6 +1618,10 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blkcnt_t.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_select.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
@@ -1494,29 +1640,25 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread.h:
 
+/opt/homebrew/include/glm/detail/_fixes.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/math.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/float.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find_if.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/errno.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/movable_box.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/wctype.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/version:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/types.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_void.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/variant:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/typeinfo:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/convert_to_timespec.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/thread:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstring:
 
@@ -1531,6 +1673,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdexcept:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_filesec_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/stack.h:
 
@@ -1554,13 +1698,13 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/functional:
 
-/opt/homebrew/include/glm/detail/_fixes.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/math.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/ostream.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/signal.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/format:
 
@@ -1581,6 +1725,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /opt/homebrew/include/glm/detail/compute_common.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdint:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/rotating_file_sink-inl.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h:
 
@@ -1648,10 +1794,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/underlying_type.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__node_handle:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/type_identity.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/strip_signature.h:
@@ -1667,14 +1809,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/move_backward.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_const.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/max_align_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/replace_copy.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/utility:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/nat.h:
 
@@ -1695,6 +1829,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/terminate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_swappable.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/ansicolor_sink.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/invoke.h:
 
@@ -1735,14 +1871,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_member_pointer.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_in_addr_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ucontext.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/mutex.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/limits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_equality_comparable.h:
 
@@ -1798,16 +1926,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/invoke.h:
 
-/opt/homebrew/include/glm/ext/vector_uint4_sized.hpp:
-
-/opt/homebrew/include/glm/vec3.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_heap.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_wctype.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/integral_constant.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/extent.h:
 
 /opt/homebrew/include/glm/detail/type_mat3x2.inl:
@@ -1821,6 +1939,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/enable_insertable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/min_max.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/this_thread.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/disjunction.h:
 
@@ -1844,13 +1964,13 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/conjunction.h:
 
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/periodic_worker.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/conditional.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/common_reference.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/alignment_of.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic_flag.h:
 
@@ -1876,9 +1996,15 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/tuple_like_no_subrange.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/tuple_indices.h:
 
 /opt/homebrew/include/glm/ext/vector_int2.hpp:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/sink-inl.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stat.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/forward.h:
 
@@ -1894,6 +2020,12 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/make_tuple_types.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/variant:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_void.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/support.h:
@@ -1908,15 +2040,33 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/system_error.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_empty.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_condition.h:
-
 /opt/homebrew/include/glm/ext/vector_int4.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_category.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/errc.h:
+
+/opt/homebrew/include/glm/ext/vector_double4_precision.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_state.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/alignment_of.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/intrusive_list_view.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_empty.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_condition.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/ansicolor_sink-inl.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/support/c11.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/atomic_unique_lock.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/operations.h:
 
@@ -1939,6 +2089,12 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/promote.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/size.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/wctype.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find_if.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/movable_box.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/sort_heap.h:
 
@@ -1993,6 +2149,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/inverse_trigonometric_functions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/negative_binomial_distribution.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/fmt/fmt.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/log2.h:
 
@@ -2052,6 +2210,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/reduce.h:
 
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/log_msg.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/pstl.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/partial_sum.h:
@@ -2088,9 +2248,19 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /opt/homebrew/include/glm/detail/type_mat3x3.inl:
 
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/os-inl.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__new/exceptions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__new/allocate.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_in_addr_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/limits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ucontext.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/mutex.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory_resource/polymorphic_allocator.h:
 
@@ -2111,6 +2281,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/temporary_buffer.h:
 
 /opt/homebrew/include/glm/ext/vector_bool2.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/swap_allocator.h:
 
@@ -2161,8 +2333,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/special_functions.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/errno.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/rounding_functions.h:
 
@@ -2240,6 +2410,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/distance.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/data.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/concepts.h:
@@ -2279,6 +2451,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /opt/homebrew/include/glm/ext/matrix_float3x4_precision.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/queue.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/stdout_color_sinks.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__string/constexpr_c_functions.h:
 
@@ -2338,6 +2512,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /opt/homebrew/include/glm/integer.hpp:
 
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/sinks/base_sink-inl.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/bind.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc.h:
@@ -2359,6 +2535,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/predicate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/copyable.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/fmt_helper.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_type.h:
 
@@ -2424,6 +2602,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_clr.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_callback.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/invocable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_endian.h:
@@ -2435,8 +2615,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /opt/homebrew/include/glm/ext/matrix_double2x2_precision.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/language.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_off_t.h:
 
@@ -2476,6 +2654,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/derived_from.h:
 
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/circular_q.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_scalar.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/constructible.h:
@@ -2485,6 +2665,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/common_reference_with.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_header_macro.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/condition_variable:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/class_or_enum.h:
 
@@ -2512,6 +2694,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /opt/homebrew/include/glm/detail/func_packing.inl:
 
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/periodic_worker-inl.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_posix_availability.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h:
@@ -2521,12 +2705,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/swap.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/high_resolution_clock.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/exchange.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc_type.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/bit_reference.h:
 
@@ -2547,8 +2725,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/bit_cast.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/make_unsigned.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/signal.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/support.h:
 
@@ -2583,6 +2759,14 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/utility:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/max_align_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/replace_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/array:
 
@@ -2626,8 +2810,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/duration.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/unwrap_iter.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/platform.h:
@@ -2638,7 +2820,13 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/transform.h:
 
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/common-inl.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/popcount.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_token.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/three_way_comp_ref_type.h:
 
@@ -2700,24 +2888,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/replace_if.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_trivial.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/iterator_traits.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find_segment_if.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__condition_variable/condition_variable.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_arithmetic.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/unary_negate.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cfloat:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/boolean_testable.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/remove_copy_if.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find.h:
@@ -2751,6 +2921,16 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/partition_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/destruct_n.h:
+
+/opt/homebrew/include/glm/ext/vector_uint4_sized.hpp:
+
+/opt/homebrew/include/glm/vec3.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/integral_constant.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_heap.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_wctype.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ctype.h:
 
@@ -2806,17 +2986,21 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_wctype_t.h:
 
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/registry.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/poisson_distribution.h:
 
 /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/glad/src/glad.c:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_partitioned.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cfloat:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/boolean_testable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/includes.h:
 
@@ -2922,13 +3106,11 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/thread.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/locale.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/replace.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/exponential_functions.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/wchar.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wint_t.h:
 
@@ -2952,11 +3134,37 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/exchange.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc_type.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/convert_to_timespec.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__node_handle:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/type_identity.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/vector_bool.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_mcontext.h:
 
 /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/glad/include/glad/glad.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_trivial.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/iterator_traits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_arithmetic.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/unary_negate.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find_segment_if.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__condition_variable/condition_variable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/count.h:
 
@@ -2965,8 +3173,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/is_valid.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h:
-
-/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/stb_image.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/find_index.h:
 
@@ -2996,6 +3202,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/binary_function.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_posix_vdisable.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/arithmetic.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h:
@@ -3014,6 +3222,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/mersenne_twister_engine.h:
 
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/pattern_formatter-inl.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint8_t.h:
@@ -3025,6 +3235,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/memory:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/size_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h:
 
@@ -3052,11 +3264,11 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_pid_t.h:
 
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/file_helper.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/mismatch.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_constructible.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/support/c11.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/bounded_iter.h:
 
@@ -3065,6 +3277,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/initializer_list:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/min_element.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/semiregular.h:
 
@@ -3094,6 +3308,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/half_positive.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/intrusive_shared_ptr.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/unique_lock.h:
@@ -3101,6 +3317,10 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/partition.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/pstl.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/wchar.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/exponential_functions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_cvref.h:
 
@@ -3136,10 +3356,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__compare/three_way_comparable.h:
 
-/opt/homebrew/include/glm/ext/vector_double4_precision.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_common.h:
@@ -3148,7 +3364,13 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_string.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/fcntl.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic_lock_free.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_types.h:
 
@@ -3165,6 +3387,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cwchar:
 
 /opt/homebrew/include/glm/matrix.hpp:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/details/log_msg_buffer-inl.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/streambuf.h:
 
@@ -3233,8 +3457,6 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/pthread_impl.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/errno.h:
 

@@ -55,7 +55,7 @@ public:
             // Back face
             4, 6, 5,
             6, 4, 7,
-
+//vim test....
             // Right face
             8, 9, 10,
             10, 11, 8,
