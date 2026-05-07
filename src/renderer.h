@@ -145,7 +145,7 @@ void Renderer::render(const World& world, const Camera& camera) {
 
         //call start_new_frame
         start_new_frame(camera, window_);
-        mesher_.generate_mesh(); //todo - good dynamic meshing...
+        mesher_.generate_mesh(); 
         glBindVertexArray(mesher_.get_VAO());
         glDrawArrays(GL_TRIANGLES, 0, mesher_.get_vertex_count());
         glBindVertexArray(0);

@@ -34,8 +34,7 @@ public:
          chunk_pos_ = chunk_pos;
     }
 
-    Chunk() {
-    }
+    Chunk() : chunk_pos_(0,0,0) {}
 
     //given local pos, returns block type at coords or air if coords out of bounds
     inline uint16_t get_block(const glm::ivec3& local_pos) const {

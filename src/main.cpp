@@ -16,7 +16,7 @@
 /* note on logical organization of the game world
     world_pos   - world space   - integer valued    - absolute position of particular block in world
     chunk_pos   - chunk space   - integer valued    - absolute position of particular chunk in the world
-    block_pos   - block space   - integer valued    - relative position of particular block within its chunk
+    block_pos   - block space   - integer valued    - relative position of particular block within its chunk, also labeled as local space
     world_pos_f - world space   - real valued       - raw gl floating point world space coordinates... for meshing and stuff
 
     relational mapping... 
@@ -62,7 +62,7 @@ int main() {
     world.set_block(glm::ivec3(-203,30,30),Block_Type::GRASS);
     world.print_all_loaded_chunks();
 
-    world.set_block(glm::ivec3(1,0,0),Block_Type::DIRT);
+    world.set_block(glm::ivec3(0,-10,0),Block_Type::DIRT);
 
     renderer.init(0); //mesh is static for now...initialize after world creation is prob going to be necessary.. pass 1 for wireframe
 	
