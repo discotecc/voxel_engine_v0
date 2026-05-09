@@ -999,6 +999,7 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/fastnoiselite/include/FastNoiseLite.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/glad/include/KHR/khrplatform.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/glad/include/glad/glad.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/common-inl.h \
@@ -1053,6 +1054,7 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/mesher.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/renderer.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/shader.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/terrain.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/world.h \
   /opt/homebrew/include/GLFW/glfw3.h \
   /opt/homebrew/include/glm/common.hpp \
@@ -2304,6 +2306,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/auto_ptr.h:
 
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/terrain.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_constructible.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/memory_resource.h:
@@ -2631,6 +2635,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_aggregate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_unbounded_array.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/fastnoiselite/include/FastNoiseLite.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/accumulate.h:
 

@@ -5,7 +5,7 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = -DGL_SILENCE_DEPRECATION
 
-C_INCLUDES = -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/glad/include -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/stbi/include -isystem /opt/homebrew/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
+C_INCLUDES = -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/glad/include -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/stbi/include -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/fastnoiselite/include -isystem /opt/homebrew/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
 
 C_FLAGSarm64 = -g -arch arm64 -Wall -Wextra -Wpedantic
 
@@ -13,7 +13,7 @@ C_FLAGS = -g -arch arm64 -Wall -Wextra -Wpedantic
 
 CXX_DEFINES = -DGL_SILENCE_DEPRECATION
 
-CXX_INCLUDES = -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/glad/include -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/stbi/include -isystem /opt/homebrew/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
+CXX_INCLUDES = -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/glad/include -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/stbi/include -I/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/fastnoiselite/include -isystem /opt/homebrew/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
 
 CXX_FLAGSarm64 = -g -std=gnu++17 -arch arm64 -Wall -Wextra -Wpedantic
 

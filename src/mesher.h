@@ -3,6 +3,14 @@
 
 #include "world.h"
 
+struct MeshStats {
+    size_t total_vertices = 0;
+    size_t total_faces = 0;
+    size_t total_blocks_processed = 0;
+    size_t chunks_processed = 0;
+    size_t air_blocks_skipped = 0;
+};
+
 class Mesher {
 public:
     Mesher(World& world);
@@ -15,11 +23,16 @@ public:
     bool should_mesh_face(const glm::ivec3& chunk_pos, const glm::ivec3& face_pos, const glm::ivec3& direction);    //takes neighboring chunks into account when face is at chunk edge
     void upload_mesh();
     void clear_mesh();
+    bool is_dirty();
+    void mark_clean();
     void init();
 
     unsigned int get_VAO();
     unsigned int get_VBO();
     std::size_t get_vertex_count();
+    MeshStats get_mesh_stats();
+
+    
 
 private:
     World& world_;
@@ -31,9 +44,12 @@ private:
     
     std::size_t vertex_count_;
 
+    bool is_dirty_;
+
+    MeshStats stats_;
 };
 
-Mesher::Mesher(World& world) : world_(world), VAO_(0), VBO_(0), vertex_count_(0) {
+Mesher::Mesher(World& world) : world_(world), VAO_(0), VBO_(0), vertex_count_(0), is_dirty_(false) {
    
 }
 
@@ -104,6 +120,7 @@ void Mesher::add_face(std::vector<float>& vertices, float x, float y, float z, i
                 x+0.5f, y-0.5f, z-0.5f,   0.0f, 0.0f, -1.0f,   u_min, v_min,
                 x-0.5f, y-0.5f, z-0.5f,   0.0f, 0.0f, -1.0f,   u_max, v_min
             });
+            stats_.total_vertices += 48; //48 vertices per face....
             break;
         case 1: // Front face (+Z)
             vertices.insert(vertices.end(), {
@@ -114,6 +131,7 @@ void Mesher::add_face(std::vector<float>& vertices, float x, float y, float z, i
                 x-0.5f, y+0.5f, z+0.5f,   0.0f, 0.0f, 1.0f,    u_min, v_max,
                 x-0.5f, y-0.5f, z+0.5f,   0.0f, 0.0f, 1.0f,    u_min, v_min
             });
+            stats_.total_vertices += 48;
             break;
         case 2: // Left face (-X)
             vertices.insert(vertices.end(), {
@@ -124,6 +142,7 @@ void Mesher::add_face(std::vector<float>& vertices, float x, float y, float z, i
                 x-0.5f, y-0.5f, z+0.5f,   -1.0f, 0.0f, 0.0f,   u_max, v_min,
                 x-0.5f, y+0.5f, z+0.5f,   -1.0f, 0.0f, 0.0f,   u_max, v_max,
             });
+            stats_.total_vertices += 48;
             break;
         case 3: // Right face (+X)
             vertices.insert(vertices.end(), {
@@ -134,6 +153,7 @@ void Mesher::add_face(std::vector<float>& vertices, float x, float y, float z, i
                 x+0.5f, y+0.5f, z-0.5f,   1.0f, 0.0f, 0.0f,    u_max, v_max,
                 x+0.5f, y+0.5f, z+0.5f,   1.0f, 0.0f, 0.0f,    u_min, v_max
             });
+            stats_.total_vertices += 48;
             break;
         case 4: // Top face (+Y) 
             vertices.insert(vertices.end(), {
@@ -144,6 +164,7 @@ void Mesher::add_face(std::vector<float>& vertices, float x, float y, float z, i
                 x+0.5f, y+0.5f, z-0.5f,   0.0f, 1.0f, 0.0f,    u_max, v_max,
                 x-0.5f, y+0.5f, z-0.5f,   0.0f, 1.0f, 0.0f,    u_min, v_max
             });
+            stats_.total_vertices += 48;
             break;
         case 5: // Bottom face (-Y) 
             vertices.insert(vertices.end(), {
@@ -154,6 +175,7 @@ void Mesher::add_face(std::vector<float>& vertices, float x, float y, float z, i
                 x-0.5f, y-0.5f, z+0.5f,   0.0f, -1.0f, 0.0f,   u_min, v_min,
                 x-0.5f, y-0.5f, z-0.5f,   0.0f, -1.0f, 0.0f,   u_min, v_max
             });
+            stats_.total_vertices += 48;
             break;
     }
 }
@@ -161,6 +183,7 @@ void Mesher::add_face(std::vector<float>& vertices, float x, float y, float z, i
 void Mesher::generate_mesh() {
 	
 	    mesh_vertices_.clear();
+        stats_ = MeshStats{};
 
         for (auto& [chunk_pos, chunk] : world_.chunks_) {
             //origin of current chunk in integer world space... 
@@ -176,7 +199,10 @@ void Mesher::generate_mesh() {
                 for (int y = 0; y < CHUNK_SIZE; y++) {
                     for (int z = 0; z < CHUNK_SIZE; z++) {
                         Block_Type block = static_cast<Block_Type>(chunk.blocks_[index(glm::ivec3(x,y,z))]);
-                        if (block == AIR) continue;
+                        if (block == AIR) {
+                            stats_.air_blocks_skipped++;
+                            continue;
+                        };
 
                         glm::ivec3 local_pos(x,y,z);
                         glm::ivec3 world_pos(chunk_origin.x + local_pos.x, chunk_origin.y + local_pos.y, chunk_origin.z + local_pos.z);
@@ -188,30 +214,38 @@ void Mesher::generate_mesh() {
                         // Face 0: Back (-Z)
                         if (should_mesh_face(chunk_pos, local_pos,glm::ivec3(0, 0, -1))) {
                             add_face(mesh_vertices_, wx, wy, wz, 0, block);
+                            stats_.total_faces++;
                         }
                         // Face 1: Front (+Z)
                         if (should_mesh_face(chunk_pos, local_pos,glm::ivec3(0, 0, 1))) {
                             add_face(mesh_vertices_, wx, wy, wz, 1, block);
+                            stats_.total_faces++;
                         }
                         // Face 2: Left (-X)
                         if (should_mesh_face(chunk_pos, local_pos,glm::ivec3(-1, 0, 0))) {
                             add_face(mesh_vertices_, wx, wy, wz, 2, block);
+                            stats_.total_faces++;
                         }
                         // Face 3: Right (+X)
                         if (should_mesh_face(chunk_pos, local_pos,glm::ivec3(1, 0, 0))) {
                             add_face(mesh_vertices_, wx, wy, wz, 3, block);
+                            stats_.total_faces++;
                         }
                         // Face 4: Top (+Y)
                         if (should_mesh_face(chunk_pos, local_pos,glm::ivec3( 0, 1, 0))) {
                             add_face(mesh_vertices_, wx, wy, wz, 4, block);
+                            stats_.total_faces++;
                         }
                         // Face 5: Bottom (-Y)
                         if (should_mesh_face(chunk_pos, local_pos,glm::ivec3(0, -1, 0))) {
                             add_face(mesh_vertices_, wx, wy, wz, 5, block);
+                            stats_.total_faces++;
                         }
+                        stats_.total_blocks_processed++;
                     }
                 }
-            }   
+            } 
+            stats_.chunks_processed++;  
         }
 
 	upload_mesh();
@@ -259,30 +293,22 @@ void Mesher::generate_full_mesh() {
 	upload_mesh();
 }
 
-//given a block and face direction (unit vector), determine whether an opaque block exists immediately next to the face (1 cell over in the same direction as the face relative to the origin of the particular block in question)
-//blocks at the chunk edge face neighboring chunk...
 bool Mesher::should_mesh_face(const glm::ivec3& chunk_pos, const glm::ivec3& local_pos, const glm::ivec3& direction) {
     glm::ivec3 neighbor_local = local_pos + direction;
-
     if (neighbor_local.x >= 0 && neighbor_local.x < CHUNK_SIZE && neighbor_local.y >= 0 && neighbor_local.y < CHUNK_SIZE && neighbor_local.z >= 0 && neighbor_local.z < CHUNK_SIZE) {
         //case neighboring block is in same chunk
         uint16_t neighbor_block = world_.chunks_[chunk_pos].blocks_[index(neighbor_local)];
         return neighbor_block == AIR;
     }
-
     //else neighboring block is in a different chunk
     glm::ivec3 neighbor_chunk_pos = chunk_pos + direction; //direction is a unit vector so is context agnostic in discrete spaces
-
     auto it = world_.chunks_.find(neighbor_chunk_pos);
     if (it == world_.chunks_.end()) {
         return true; //neighboring chunk doesn't exist
     }
-    
-    
     glm::ivec3 converted_local((neighbor_local.x + CHUNK_SIZE) % CHUNK_SIZE, (neighbor_local.y + CHUNK_SIZE) % CHUNK_SIZE, (neighbor_local.z + CHUNK_SIZE) % CHUNK_SIZE); //neighbor_local is relative to current chunk; conversion to neighbor chunk's block space
     uint16_t neighbor_block = it->second.blocks_[index(converted_local)];
     return neighbor_block == AIR;
-   
 }
 
 void Mesher::upload_mesh() {
@@ -317,6 +343,9 @@ std::size_t Mesher::get_vertex_count() {
     return vertex_count_;
 }
 
+MeshStats Mesher::get_mesh_stats() {
+    return stats_;
+}
 
 unsigned int Mesher::get_VAO() {
     return VAO_;
@@ -324,4 +353,12 @@ unsigned int Mesher::get_VAO() {
 
 unsigned int Mesher::get_VBO() {
     return VBO_;
+}
+
+bool Mesher::is_dirty() {
+    return is_dirty_;
+}
+
+void Mesher::mark_clean() {
+    is_dirty_ = false;
 }

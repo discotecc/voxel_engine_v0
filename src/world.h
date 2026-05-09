@@ -59,6 +59,21 @@ public:
         chunk.set_block(local_pos, type);
     }
 
+    void create_terrained_chunk(const glm::ivec3& pos, std::vector<float> terrain_data) {
+	Chunk& chunk = get_or_create_chunk(pos);
+	auto terrain_it = terrain_data.begin();
+	int terrain_val;
+	for (int x = 0; x < CHUNK_SIZE; x++) {
+		for (int z = 0; z < CHUNK_SIZE; z++) {
+			terrain_val = static_cast<int>(*terrain_it);
+			for (int y = 0; y < terrain_val; y++) {
+				chunk.set_block(glm::ivec3(x,y,z), Block_Type::STONE);
+			}
+			terrain_it++;
+		}
+	}
+	}
+
     void create_dirt_chunk(const glm::ivec3& pos) {;
         Chunk& chunk = get_or_create_chunk(pos);
         chunk.fill_dirt();
@@ -76,7 +91,6 @@ public:
 
     void print_all_loaded_chunks() const {
         std::cout << "=== Loaded chunks: " << chunks_.size() << " ===\n\n";
-
         for (const auto& [pos, chunk] : chunks_) {
             std::cout << "Chunk (" << pos.x << ", " << pos.y << ", " << pos.z 
                       << ")  |  solid blocks: " << count_solid_blocks(chunk) 
@@ -88,7 +102,6 @@ public:
 
     inline size_t measure_memory() const {
         size_t total = sizeof(chunks_);
-
         for (const auto& [position, chunk] : chunks_) {
             total += chunk.measure_memory();
         }

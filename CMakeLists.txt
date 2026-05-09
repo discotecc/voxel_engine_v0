@@ -25,6 +25,7 @@ target_include_directories(vengine0 PRIVATE
   external/glad/include
   external/spdlog/include
   external/stbi/include
+  external/fastnoiselite/include
 )
 
 target_link_libraries(vengine0 PRIVATE

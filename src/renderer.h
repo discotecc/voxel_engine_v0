@@ -25,6 +25,9 @@ public:
     unsigned int SCR_HEIGHT_ = 1080;
     GLFWwindow* window_;
     Camera* camera_;
+    World& world_;
+    Mesher mesher_;
+
     Renderer(World& world);
     ~Renderer();
 
@@ -42,9 +45,6 @@ private:
     std::unique_ptr<Shader> shader_;
     std::vector<const Chunk*> visible_chunks_;
     unsigned int texture_;
-
-    World& world_;
-    Mesher mesher_;
 
     static Renderer* instance_;   
     //shader file paths
@@ -142,10 +142,13 @@ void Renderer::render(const World& world, const Camera& camera) {
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture_);
         shader_->set_int("currentTexture", 0);
+        if (mesher_.is_dirty()) {
+            mesher_.generate_mesh();
+            mesher_.mark_clean();
+        }
 
         //call start_new_frame
         start_new_frame(camera, window_);
-        mesher_.generate_mesh(); 
         glBindVertexArray(mesher_.get_VAO());
         glDrawArrays(GL_TRIANGLES, 0, mesher_.get_vertex_count());
         glBindVertexArray(0);
@@ -153,6 +156,7 @@ void Renderer::render(const World& world, const Camera& camera) {
         //call fulstrum culling probably
         //loop over visible_chunks and call draw_chunk
     }
+
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -197,15 +201,12 @@ unsigned int load_texture(char const * path)
 }
 
 void Renderer::loop() {
-
     while(!glfwWindowShouldClose(window_)) {
         process_input(window_, camera_);
         render(world_, *camera_);
         glfwSwapBuffers(window_);
         glfwPollEvents();
     }
-       
-    
 }
 
 void Renderer::process_input(GLFWwindow* window, Camera* camera)
@@ -232,17 +233,13 @@ void Renderer::mouse_callback(GLFWwindow* window, double xpos, double ypos) {
         last_y = ypos;
         first_mouse = false;
     }
-
     float xoffset = xpos - last_x;
     float yoffset = last_y - ypos; // Reversed since y-coordinates go from bottom to top
-
     last_x = xpos;
     last_y = ypos;
-
     float sensitivity = 0.5f;
     xoffset *= sensitivity;
     yoffset *= sensitivity;
-
     instance_->camera_->process_mouse_movement(xoffset, yoffset);
 }
 
