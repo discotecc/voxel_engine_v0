@@ -52,7 +52,6 @@ private:
     std::filesystem::path vs_path_;
     //texture file paths
     std::filesystem::path tex_path_;
-    //we only have one big texture atlas and one set of shaders for now... (Noob alert)
 
     //helpers
     void start_new_frame(const Camera& camera, GLFWwindow* window); //set shader, matrices, clear screen

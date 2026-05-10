@@ -41,7 +41,7 @@ std::vector<float> Terrain::get_normalized_terrain() {
 		data = noise_data_[x];
 		data = data + 1;
 		data = data / 2;
-		data = data * 16;	//general norm equation... (x - min(x))/(max(x)-min(x))
+		data = data * chunk_size_;	//general norm equation... (x - min(x))/(max(x)-min(x))
 		nt[x] = data;
 	}
 	return nt;

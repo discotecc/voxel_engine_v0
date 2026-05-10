@@ -10,7 +10,7 @@
 constexpr int CHUNK_SIZE = 16;
 constexpr int CHUNK_VOLUME = CHUNK_SIZE * CHUNK_SIZE * CHUNK_SIZE;
 
-//globally defined coordinate flattener for indexing into the vectors, same for all flat data structures. keep in mind that chunk map takes ivecs
+//keep in mind that chunk map takes ivecs
 inline constexpr size_t index(const glm::ivec3& pos)  noexcept {
     return static_cast<size_t>(pos.x) + static_cast<size_t>(pos.z) * CHUNK_SIZE + static_cast<size_t>(pos.y) * CHUNK_SIZE * CHUNK_SIZE;
 }

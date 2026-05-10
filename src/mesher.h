@@ -1,4 +1,3 @@
-//converts chunk data to mesh (vertices, indices, etc)
 #pragma once
 
 #include "world.h"
@@ -189,11 +188,9 @@ void Mesher::generate_mesh() {
             //origin of current chunk in integer world space... 
             glm::ivec3 chunk_origin(chunk_pos.x * CHUNK_SIZE, chunk_pos.y * CHUNK_SIZE, chunk_pos.z * CHUNK_SIZE);
             
-            //floating point world_pos for vertex calculations
             float world_x = static_cast<float>(chunk_pos.x * CHUNK_SIZE);
             float world_y = static_cast<float>(chunk_pos.y * CHUNK_SIZE);
             float world_z = static_cast<float>(chunk_pos.z * CHUNK_SIZE);
-
 
             for (int x = 0; x < CHUNK_SIZE; x++) {
                 for (int y = 0; y < CHUNK_SIZE; y++) {
@@ -210,7 +207,7 @@ void Mesher::generate_mesh() {
                         float wy = world_y + static_cast<float>(y);
                         float wz = world_z + static_cast<float>(z);
 
-                        // Check each face and add vertices if visible
+                        // Check each face and add vertices if visible... condition for visibility is whether surface is exposed to air
                         // Face 0: Back (-Z)
                         if (should_mesh_face(chunk_pos, local_pos,glm::ivec3(0, 0, -1))) {
                             add_face(mesh_vertices_, wx, wy, wz, 0, block);

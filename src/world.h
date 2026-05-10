@@ -1,4 +1,3 @@
-//manages all loaded chunks + hash for fast lookup by position, loading/unloading/ dirt propogation to neighbors
 #pragma once
 
 #include <unordered_map>
@@ -10,7 +9,6 @@
 
 #include "chunk.h"
 
-// Provide std::hash for glm::ivec3 so we can use it as key in unordered_map
 namespace std {
     template<>
     struct hash<glm::ivec3> {
@@ -31,16 +29,14 @@ class World {
 public:
     std::unordered_map<glm::ivec3, Chunk> chunks_;
 
-    //default constructor, starts with no chunks loaded
     World() = default;
 
-    //returns pointer to chunk if found, nullptr otherwise
     Chunk* get_chunk(glm::ivec3 pos) {
         auto it = chunks_.find(pos);
         if (it != chunks_.end()) {
             return &it->second;
         }
-        return nullptr; //failed to load chunk
+        return nullptr; 
     }
 
     //tries to insert air chunks as position in world space
