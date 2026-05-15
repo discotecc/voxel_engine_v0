@@ -24,8 +24,12 @@ class Chunk {
 public:
   std::vector<uint16_t> blocks_ = std::vector<uint16_t>(CHUNK_VOLUME, 0);
   glm::ivec3 chunk_pos_;
+  bool is_terrained_;
 
-  Chunk(glm::ivec3 chunk_pos) { chunk_pos_ = chunk_pos; }
+  Chunk(glm::ivec3 chunk_pos) {
+    chunk_pos_ = chunk_pos;
+    is_terrained_ = false;
+  }
 
   Chunk() : chunk_pos_(0, 0, 0) {}
 
@@ -41,6 +45,9 @@ public:
       blocks_[index(local_pos)] = block;
     }
   }
+
+  void mark_terrained() { is_terrained_ = true; }
+  void mark_unterrained() { is_terrained_ = false; }
 
   inline void remove_block() {}
 

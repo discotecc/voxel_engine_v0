@@ -29,6 +29,8 @@ public:
                                         // block to the player position
   glm::vec3 get_player_pos_global_f();  // get actual player coordinates
 
+  glm::vec3 get_inhabited_chunk();
+
 private:
   // player position
   glm::vec3 pos_global_f_;     // raw floats
@@ -114,6 +116,7 @@ void Player::set_player_pos_i(glm::ivec3 pos_global_i) {
   pos_global_i_ = pos_global_i;
   pos_global_f_ = pos_global_i;
   camera_->set_pos(pos_global_i);
+  inhabited_chunk_ = global_to_chunk_pos(pos_global_i);
 };
 
 void Player::set_player_pos_l(glm::ivec3 chunk_pos, glm::ivec3 block_pos) {
@@ -130,3 +133,5 @@ glm::ivec3 Player::get_player_chunk_pos() {
 glm::ivec3 Player::get_player_pos_global_i() { return pos_global_i_; };
 
 glm::vec3 Player::get_player_pos_global_f() { return pos_global_f_; };
+
+glm::vec3 Player::get_inhabited_chunk() { return inhabited_chunk_; }

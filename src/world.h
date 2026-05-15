@@ -81,19 +81,24 @@ public:
     chunk.set_block(local_pos, type);
   }
 
-  void create_terrained_chunk(const glm::ivec3 &pos,
-                              std::vector<float> terrain_data) {
-    Chunk &chunk = get_or_create_chunk(pos);
-    auto terrain_it = terrain_data.begin();
-    int terrain_val;
-    for (int x = 0; x < CHUNK_WIDTH; x++) {
-      for (int z = 0; z < CHUNK_WIDTH; z++) {
-        terrain_val = static_cast<int>(*terrain_it);
-        for (int y = 0; y < terrain_val; y++) {
-          chunk.set_block(glm::ivec3(x, y, z), Block_Type::STONE);
+  // checks if selected chunk is already terrained, applies terrain if not,
+  // creates new chunk at chunk_pos if didnt exist before
+  void generate_terrained_chunk(glm::ivec3 chunk_pos) {
+    Chunk &current_chunk = get_or_create_chunk(chunk_pos);
+    if (!current_chunk.is_terrained_) {
+      int column_height = 0;
+      for (int x = 0; x < CHUNK_WIDTH; x++) {
+        for (int z = 0; z < CHUNK_WIDTH; z++) {
+          glm::ivec3 current_global_pos = local_to_global_pos(
+              glm::ivec3(chunk_pos.x, 0, chunk_pos.y), glm::ivec3(x, 0, z));
+          column_height = terrain.get_column_height(current_global_pos.x,
+                                                    current_global_pos.z);
+          for (int y = 0; y < column_height; y++) {
+            current_chunk.set_block(glm::ivec3(x, y, z), STONE);
+          }
         }
-        terrain_it++;
       }
+      current_chunk.mark_terrained();
     }
   }
 
@@ -130,35 +135,6 @@ public:
 
   void update_loaded_chunks(glm::ivec3 center_chunk_pos, int render_radius) {}
 
-  /*
-  //biome begins as pos X,Z in the 2D chunk space (will be a corner chunk of the
-  biome) void generate_biome(const glm::ivec3& pos, Biome_Type biome, int size)
-  {
-
-      int column_height = 0;
-      terrain = Terrain();
-      terrain.noise_.SetFrequency(0.017);
-      int x_multiplicand, z_multiplicand = 0;
-      for (int bx = 0; bx < size; bx++) {
-          for (int bz = 0; bz < size; bz++) {
-              glm::ivec3 current_chunk_pos((bx+1) + pos.x,0,(bz+1) + pos.z);
-              Chunk& chunk = get_or_create_chunk(current_chunk_pos);
-              for (int z = 0; z < CHUNK_WIDTH; z++) {
-                  for (int x = 0; x < CHUNK_WIDTH; x++) {
-                      column_height = terrain.get_column_height(
-  (x_multiplicand*chunks_.size()) + x, (z_multiplicand*chunks_.size() + z));
-                      spdlog::info("column_height val... {}", column_height);
-                      for (int y = 0; y < column_height; y++) {
-                          chunk.set_block(glm::ivec3(x,y,z), GRASS);
-                      }
-                  }
-              }
-              z_multiplicand++;
-          }
-          x_multiplicand++;
-      };
-  }
-*/
   void create_dirt_chunk(const glm::ivec3 &pos) {
     Chunk &chunk = get_or_create_chunk(pos);
     chunk.fill_dirt();
