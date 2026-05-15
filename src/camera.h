@@ -8,138 +8,144 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <iostream>
 
-//Defines directions for camera movement abstracted away from window-specific input methods
-//so can be reused in many contexts
-enum Camera_Movement {
-	FORWARD,
-	BACKWARD,
-	LEFT,
-	RIGHT
-};
+// Defines directions for camera movement abstracted away from window-specific
+// input methods so can be reused in many contexts
+enum Camera_Movement { FORWARD, BACKWARD, LEFT, RIGHT };
 
-//default camera values
-const float YAW = -90.0f;
-const float PITCH = 0.0f;
-//const float SPEED = 8.5f;
+// const float SPEED = 8.5f;
 const float SPEED = 20.0f;
 const float SENSITIVITY = 0.7f;
 const float ZOOM = 45.0f;
 
-class Camera
-{
+class Camera {
 public:
-	glm::vec3 Position;
-	glm::vec3 Front;
-	glm::vec3 Up;
-	glm::vec3 Right;
-	glm::vec3 WorldUp;
-	//eueler angles
-	float Yaw;
-	float Pitch;
-	//camera options
-	float MovementSpeed;
-	float MouseSensitivity;
-	float Zoom;
-	bool isLocked;
-	
-	//constructor with vectors
-	Camera(glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f), float yaw = YAW, float pitch = PITCH) : Front(glm::vec3(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVITY), Zoom(ZOOM)
-	{
-		Position = position;
-		WorldUp = up;
-		Yaw = yaw;
-		Pitch = pitch;
-		isLocked = false;
-		update_camera_vectors();
-	}
-	//constructor with scalar values
-	Camera(float posX, float posY, float posZ, float upX, float upY, float upZ, float yaw, float pitch) : Front(glm::vec3(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVITY), Zoom(ZOOM)
-	{
-		Position = glm::vec3(posX, posY, posZ);
-		WorldUp = glm::vec3(upX, upY, upZ);
-		Yaw = yaw;
-		Pitch = pitch;
-		isLocked = false;
-		update_camera_vectors();
-	}
+  // constructor takes in position, yaw, pitch
+  Camera(glm::vec3 pos, float yaw, float pitch);
 
-	glm::mat4 get_view_matrix() const
-	{
-		return glm::lookAt(Position, Position + Front, Up);
-	}
+  glm::mat4 get_view_matrix() const;
+  glm::mat4 get_projection_matrix(float width, float height) const;
 
-	glm::mat4 get_projection_matrix(float width, float height) const
-	{
-		return glm::perspective(glm::radians(Zoom), width / height, 0.1f, 10000.0f);
-	}
+  void toggle_lock();
+  void process_mouse_scroll(float yoffset);
+  void update() { update_camera_vectors(); };
 
-	void process_keyboard(Camera_Movement direction)
-	{
-		float velocity = MovementSpeed * 0.02;
-		if (direction == FORWARD)
-			Position += Front * velocity;
-		if (direction == BACKWARD)
-			Position -= Front * velocity;
-		if (direction == LEFT)
-			Position -= Right * velocity;
-		if (direction == RIGHT)
-			Position += Right * velocity;
-	}
+  glm::vec3 get_pos();
+  glm::vec3 get_front();
+  glm::vec3 get_up();
+  glm::vec3 get_right();
+  glm::vec3 get_world_up();
 
-	void process_mouse_movement(float xoffset, float yoffset, GLboolean constrainPitch = true)
-	{
-		if (isLocked)
-			return;
+  float get_yaw();
+  float get_pitch();
 
-		xoffset *= MouseSensitivity;
-		yoffset *= MouseSensitivity;
+  float get_movement_speed();
+  float get_mouse_sensitivity();
+  float get_zoom();
+  bool is_locked();
 
-		Yaw += xoffset;
-		Pitch += yoffset;
-
-		if (constrainPitch)
-		{
-			if (Pitch > 89.0f)
-				Pitch = 89.0f;
-			if (Pitch < -89.0f)
-				Pitch = -89.0f;
-		}
-
-		update_camera_vectors();
-	}
-
-	void process_mouse_scroll(float yoffset)
-	{
-		Zoom -= (float)yoffset;
-
-		if (Zoom < 1.0f)
-			Zoom = 1.0f;
-		if (Zoom > 45.0f)
-			Zoom = 45.0f;
-	}
-
-	void toggle_lock()
-	{
-		isLocked = !isLocked;
-		if (isLocked)
-			std::cout << "Locked Camera" << std::endl;
-		else
-			std::cout << "Unlocked Camera" << std::endl;
-	}
+  void set_pos(glm::vec3 pos);
+  void set_front(glm::vec3 front);
+  void set_yaw(float yaw);
+  void set_pitch(float pitch);
+  void set_movement_speed(float movement_speed);
+  void set_mouse_sensitivity(float mouse_sensitivity);
+  void set_zoom(float zoom);
 
 private:
-	void update_camera_vectors() {
+  glm::vec3 pos_;
+  glm::vec3 front_;
+  glm::vec3 up_;
+  glm::vec3 right_;
+  glm::vec3 world_up_;
+  // eueler angles
+  float yaw_;
+  float pitch_;
+  // camera options
+  float movement_speed_;
+  float mouse_sensitivity_;
+  float zoom_;
+  bool is_locked_;
 
-		//calculate the new front vector
-		glm::vec3 front;
-		front.x = cos(glm::radians(Yaw)) * cos(glm::radians(Pitch));
-		front.y = sin(glm::radians(Pitch));
-		front.z = sin(glm::radians(Yaw)) * cos(glm::radians(Pitch));
-		Front = glm::normalize(front);
-		//recalculate right and up vectors
-		Right = glm::normalize(glm::cross(Front, WorldUp));
-		Up = glm::normalize(glm::cross(Right, Front));
-	}
+  void update_camera_vectors();
 };
+
+// constructor takes in position, yaw, pitch
+Camera::Camera(glm::vec3 pos, float yaw, float pitch) {
+  spdlog::info("entered camera constructor...");
+  pos_ = pos;
+  yaw_ = yaw;
+  pitch_ = pitch;
+  up_ = glm::vec3(0.0f, 1.0f, 0.0f);
+  world_up_ = glm::vec3(0.0f, 1.0f, 0.0f);
+  front_ = glm::vec3(0.0f, 0.0f, -1.0f);
+  movement_speed_ = SPEED;
+  mouse_sensitivity_ = SENSITIVITY;
+  zoom_ = ZOOM;
+  is_locked_ = false;
+  update_camera_vectors();
+  spdlog::info("leaving camera constructor...");
+}
+
+glm::mat4 Camera::get_view_matrix() const {
+  return glm::lookAt(pos_, pos_ + front_, up_);
+}
+
+glm::mat4 Camera::get_projection_matrix(float width, float height) const {
+  return glm::perspective(glm::radians(zoom_), width / height, 0.1f, 10000.0f);
+}
+
+void Camera::update_camera_vectors() {
+
+  // calculate the new front vector
+  glm::vec3 front;
+  front.x = cos(glm::radians(yaw_)) * cos(glm::radians(pitch_));
+  front.y = sin(glm::radians(pitch_));
+  front.z = sin(glm::radians(yaw_)) * cos(glm::radians(pitch_));
+  front_ = glm::normalize(front);
+  // recalculate right and up vectors
+  right_ = glm::normalize(glm::cross(front, world_up_));
+  up_ = glm::normalize(glm::cross(right_, front));
+}
+
+void Camera::process_mouse_scroll(float yoffset) {
+  zoom_ -= (float)yoffset;
+
+  if (zoom_ < 1.0f)
+    zoom_ = 1.0f;
+  if (zoom_ > 45.0f)
+    zoom_ = 45.0f;
+}
+
+void Camera::toggle_lock() {
+  is_locked_ = !is_locked_;
+  if (is_locked_)
+    std::cout << "Locked Camera" << std::endl;
+  else
+    std::cout << "Unlocked Camera" << std::endl;
+}
+
+glm::vec3 Camera::get_pos() { return pos_; };
+glm::vec3 Camera::get_front() { return front_; };
+glm::vec3 Camera::get_up() { return up_; };
+glm::vec3 Camera::get_right() { return right_; };
+glm::vec3 Camera::get_world_up() { return world_up_; };
+float Camera::get_yaw() { return yaw_; };
+float Camera::get_pitch() { return pitch_; };
+float Camera::get_movement_speed() { return movement_speed_; };
+float Camera::get_mouse_sensitivity() { return mouse_sensitivity_; };
+float Camera::get_zoom() { return zoom_; };
+bool Camera::is_locked() { return is_locked_; };
+
+void Camera::set_pos(glm::vec3 pos) { pos_ = pos; };
+void Camera::set_front(glm::vec3 front) { front_ = front; };
+void Camera::set_yaw(float yaw) { yaw_ = yaw; };
+void Camera::set_pitch(float pitch) { pitch_ = pitch; };
+void Camera::set_movement_speed(float movement_speed) {
+  movement_speed_ = movement_speed;
+};
+void Camera::set_mouse_sensitivity(float mouse_sensitivity) {
+  mouse_sensitivity_ = mouse_sensitivity;
+};
+void Camera::set_zoom(float zoom) { zoom_ = zoom; };
 
 #endif

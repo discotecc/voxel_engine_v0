@@ -1048,12 +1048,15 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/tweakme.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/spdlog/include/spdlog/version.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/stbi/include/stb_image.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/biome_type.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/block_type.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/camera.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/chunk.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/mesher.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/player.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/renderer.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/shader.h \
+  /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/skybox.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/terrain.h \
   /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/world.h \
   /opt/homebrew/include/GLFW/glfw3.h \
@@ -1442,11 +1445,15 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 
 /opt/homebrew/include/GLFW/glfw3.h:
 
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/player.h:
+
 /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/mesher.h:
 
 /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/chunk.h:
 
 /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/block_type.h:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/biome_type.h:
 
 /Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/external/stbi/include/stb_image.h:
 
@@ -2173,6 +2180,8 @@ CMakeFiles/vengine0.dir/src/main.cpp.o: /Users/georgeandrewporte/Dev/graphics/vo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/exponential_distribution.h:
 
 /opt/homebrew/include/glm/ext/matrix_clip_space.inl:
+
+/Users/georgeandrewporte/Dev/graphics/voxel_engine_v0/src/skybox.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/discrete_distribution.h:
 
